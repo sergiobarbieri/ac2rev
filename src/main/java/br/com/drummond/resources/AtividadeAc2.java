@@ -1,5 +1,7 @@
 package br.com.drummond.resources;
 
+import java.util.Date;
+
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +18,17 @@ public class AtividadeAc2 {
 		resultado = valor1 + valor2;
 
 		return resultado;
+
+	}
+	
+	/**
+	 * Metodo opcional
+	 * @return
+	 */
+	@RequestMapping(value = {"/", "/health"}, method = RequestMethod.GET)
+	public String health()  {
+		
+		return "Online - " + new Date();
 
 	}
 
